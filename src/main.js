@@ -1,6 +1,6 @@
 import Discord from 'discord.js';
 import { config } from 'dotenv';
-import acceptedActions from './acceptActions.js';
+import acceptedTextActions from './acceptedTextActions.js';
 
 config();
 
@@ -11,7 +11,7 @@ client.on('ready', () => {
 });
 
 client.on('message', (msg) => {
-  const action = acceptedActions[msg.content];
+  const action = acceptedTextActions[msg.content];
 
   if (action) {
     action(msg);

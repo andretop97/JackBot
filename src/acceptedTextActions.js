@@ -1,4 +1,4 @@
-const acceptedActions = {
+const acceptedTextActions = {
   'Parabens Dener': function (msg) {
     const text = `PAURABENS PRO MAIOR ESPECIALISTA EM PEDRA DO GUANABARA ${msg.guild.member(
       '273900699274838026'
@@ -42,4 +42,4 @@ const acceptedActions = {
   },
 };
 
-export default acceptedActions;
+export default acceptedTextActions;
