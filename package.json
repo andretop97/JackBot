@@ -1,0 +1,21 @@
+{
+  "name": "JackBot",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "repository": "git@github.com:andretop97/JackBot.git",
+  "author": "Andre Luiz Branco Barbosa Araujo <andreluizpsn975@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/main.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "ffmpeg-static": "^4.2.7"
+  }
+}
