@@ -1,3 +1,5 @@
+const UserController = require('./database/controllers/UserController');
+
 const acceptedTextActions = {
   'Parabens Dener': function (msg) {
     const text = `PAURABENS PRO MAIOR ESPECIALISTA EM PEDRA DO GUANABARA ${msg.guild.member(
@@ -22,13 +24,44 @@ const acceptedTextActions = {
     msg.channel.send(imageUrl);
   },
 
+  'feliz natal': function (msg) {
+    const text = 'PEGA NO MEU PAU';
+
+    msg.channel.send(text);
+  },
+
+  'create': function (msg) {
+    msg.mentions.users.forEach((user) => {
+      UserController.store({
+        discord_id: user.id,
+        username: user.username,
+        discriminator: user.discriminator,
+      });
+    });
+  },
+
+  'update aniversario': function (msg) {
+    const birthday = msg.content.split(' ').pop();
+    const [day, month, year] = birthday.split('/');
+    const date = new Date(year, month - 1, day);
+
+    msg.mentions.users.forEach((user) => {
+      UserController.update({
+        discord_id: user.id,
+        username: user.username,
+        discriminator: user.discriminator,
+        birthday: date,
+      });
+    });
+  },
+
   'teste': function (msg) {
     msg.guild.members
       .fetch()
       .then((response) => {
         response.forEach((member) => {
-          if (member.user.username == 'lawlie') {
-            console.log(member.user);
+          if (member.user.username == 'DotPotato') {
+            console.log(member);
           }
         });
       })
@@ -42,4 +75,4 @@ const acceptedTextActions = {
   },
 };
 
-export default acceptedTextActions;
+module.exports = acceptedTextActions;

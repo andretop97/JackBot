@@ -1,8 +1,7 @@
 {
   "name": "JackBot",
   "version": "1.0.0",
-  "type": "module",
-  "main": "index.js",
+  "main": "src/main.js",
   "repository": "git@github.com:andretop97/JackBot.git",
   "author": "Andre Luiz Branco Barbosa Araujo <andreluizpsn975@hotmail.com>",
   "license": "MIT",
@@ -10,12 +9,17 @@
     "start": "nodemon src/main.js"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "sequelize-cli": "^6.2.0"
   },
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
-    "ffmpeg-static": "^4.2.7"
+    "ffmpeg-static": "^4.2.7",
+    "node-cron": "^2.0.3",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
   }
 }
