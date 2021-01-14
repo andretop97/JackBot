@@ -3,6 +3,10 @@ module.exports = {
   async getUsersByBirthday(date) {
     return await User.findAll({ where: { birthday: date } });
   },
+
+  async getAllUsers() {
+    return await User.findAll();
+  },
   async update(body) {
     const { discord_id, username, discriminator, birthday } = body;
     await User.update(

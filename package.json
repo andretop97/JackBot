@@ -16,10 +16,13 @@
     "@discordjs/opus": "^0.3.3",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
+    "ffmpeg": "^0.0.4",
     "ffmpeg-static": "^4.2.7",
+    "fluent-ffmpeg": "^2.1.2",
     "node-cron": "^2.0.3",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "ytdl-core": "^4.3.1"
   }
 }

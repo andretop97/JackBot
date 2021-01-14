@@ -1,7 +1,16 @@
 const UserController = require('./database/controllers/UserController');
 
 const acceptedTextActions = {
-  'Parabens Dener': function (msg) {
+  'parabens lukita': async function (msg) {
+    const text = `Parabens ${msg.guild.member('351424120841437184')}`;
+
+    const imageUrl =
+      'https://media.discordapp.net/attachments/361345189077319680/795010960414867486/unknown.png?width=723&height=676';
+
+    msg.channel.send(text);
+    msg.channel.send(imageUrl);
+  },
+  'parabens Dener': function (msg) {
     const text = `PAURABENS PRO MAIOR ESPECIALISTA EM PEDRA DO GUANABARA ${msg.guild.member(
       '273900699274838026'
     )}( olha que isso é muita coisa )`;
@@ -13,7 +22,7 @@ const acceptedTextActions = {
     msg.channel.send(imageUrl);
   },
 
-  'Parabens meu anjo': function (msg) {
+  'parabens meu anjo': function (msg) {
     const text = `PARABENS , FELIZ ANIVERSARIO ${msg.guild.member(
       '530500971680366593'
     )} PELO BOT ATRASADO`;
